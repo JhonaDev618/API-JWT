@@ -1,22 +1,24 @@
 import express from "express";
-import publicRoutes from "./routes/public.js";
-import "dotenv/config"; // Importa as variáveis de ambiente no .env variable
+import publicRoutes from './routes/public.js'
 
 const app = express();
-const port = process.env.PORT; // Define a porta do servidor
-app.use(express.json()); // define que o express vai utilizar json
+const port = 3000;
+app.use(express.json()); // defien que o express vai utilizar json 
 
 // Rotas públicas do arquivo routes
-app.use("/", publicRoutes);
+app.use('/', publicRoutes);
 
 /*
-Agora vamos evoluir a API criada na atividade anterior:
-Autenticação JWT:Criar um endpoint POST /login que gere um token JWT ao receber um usuário e senha.
-Proteger a rota GET /users para que apenas usuários autenticados possam acessar.
-
-Enviem o código e um vídeo testando no postman - *Envio com link do Github
+Você deve criar uma API que permita gerenciar usuários, 
+seguindo os requisitos abaixo:
+Criar um servidor Node.js utilizando o Express. OK
+Implementar as seguintes rotas:GET /users → Retorna a lista de usuários cadastrados. ok
+POST /users → Adiciona um novo usuário (enviar nome e e-mail no corpo da requisição). ok
+PUT /users/:id → Atualiza os dados de um usuário pelo ID.
+DELETE /users/:id → Remove um usuário pelo ID.
+Os dados devem ser armazenados em uma lista na memória.
+Retornar os dados no formato JSON.
 */
 
-app.listen(port, () =>
-  console.log(`Servidor rodando na porta http:\\localhost:${port} 🚀`)
-);
+app.listen(port, () => console.log(`Servidor rodando na porta http:\\localhost:${port} 🚀`));
+

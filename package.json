@@ -1,6 +1,7 @@
 {
   "name": "api",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -11,10 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cripto": "^1.1.4",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2"
-  },
-  "description": ""
+    "express": "^4.21.2"
+  }
 }
